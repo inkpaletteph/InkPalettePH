@@ -1,14 +1,14 @@
 /* --- Global Resets & Variables (Synced to Logo Profile Background) --- */
 :root {
-    /* Base color values mapped cleanly from your logo */
     --logo-bg: #e2dacb;     /* The exact stone/beige tone from your image background */
     --text-dark: #111111;   /* True solid black for crisp typography reading */
     --cyan-accent: #85ccd2; /* Light clear cyan highlight */
     --pink-accent: #fda6b2; /* Subtle pink identifier overlay */
+    --teal-dark: #458b8d;
     
     /* Global layout variable application */
     --bg-deep: var(--logo-bg);
-    --bg-accent: #ebdfcb;   /* Slightly darker step variant of the logo background */
+    --bg-accent: #ebdfcb;   
     --card-bg: #ffffff;
     --text-primary: var(--text-dark);
     --primary: var(--cyan-accent);
@@ -47,7 +47,7 @@ body {
 
 /* --- Header & Logo Handling --- */
 header {
-    background-color: rgba(226, 218, 203, 0.95); /* Semi-transparent header base matching logo */
+    background-color: rgba(226, 218, 203, 0.95); 
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -62,7 +62,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; /* Padding squeezed slightly for optimal logo baseline */
+    padding: 10px 0; 
 }
 
 .logo-link {
@@ -71,9 +71,11 @@ header {
     text-decoration: none;
 }
 
+/* THIS RULE SHRINKS THE LOGO */
 .logo-img {
-    height: 70px; /* Constrains the logo safely so it doesn't crowd navigation elements */
-    width: auto;
+    height: 70px !important; 
+    width: auto !important;
+    max-height: 70px;
     object-fit: contain;
 }
 
@@ -100,6 +102,7 @@ header {
     padding: 12px 24px;
     border-radius: 6px;
     font-size: 14px;
+    text-decoration: none;
 }
 
 /* --- Mobile Menu Configuration --- */
@@ -350,7 +353,6 @@ footer {
 .footer-logo {
     height: 60px;
     width: auto;
-    filter: brightness(1.1); /* Keeps the image vibrant against deep block space */
 }
 
 .footer-socials a {
